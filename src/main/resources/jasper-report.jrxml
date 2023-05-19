@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_3" pageWidth="254" pageHeight="325" columnWidth="214" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d7bd3dde-d533-4ff6-ae63-40f9abdc9d2d">
+    <queryString language="SQL">
+        <![CDATA[select * from booking]]>
+    </queryString>
+    <field name="codeBooking" class="java.lang.String"/>
+    <field name="date" class="java.lang.String"/>
+    <field name="endTime" class="java.sql.Time"/>
+    <field name="movieName" class="java.lang.String"/>
+    <field name="price" class="java.lang.Integer"/>
+    <field name="seat" class="java.lang.String"/>
+    <field name="startTime" class="java.sql.Time"/>
+    <field name="studio" class="java.lang.String"/>
+    <field name="username" class="java.lang.String"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="40" splitType="Stretch">
+            <line>
+                <reportElement x="1" y="39" width="208" height="1" uuid="47a28e49-c35e-44eb-90c3-b30513e1d5e3"/>
+            </line>
+            <image scaleImage="RealHeight" hAlign="Center" vAlign="Middle">
+                <reportElement x="0" y="2" width="209" height="37" uuid="13d95ad0-c303-442f-b0a6-b5dd73ed9bdb"/>
+                <box leftPadding="0"/>
+                <imageExpression><![CDATA["https://user-images.githubusercontent.com/79635999/239347006-2e23ce11-2a97-413e-95c2-f0cd0dbb1d92.png"]]></imageExpression>
+            </image>
+        </band>
+    </title>
+    <detail>
+        <band height="214" splitType="Stretch">
+            <rectangle radius="2">
+                <reportElement x="1" y="0" width="208" height="120" uuid="99287197-f7ae-46d5-9150-105684d955f2"/>
+            </rectangle>
+            <textField>
+                <reportElement x="0" y="0" width="209" height="30" uuid="21ec6a26-8b65-4f9a-b1d1-3faef6324215"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Trebuchet MS" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{movieName}.toUpperCase()]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="80" y="60" width="50" height="10" uuid="f51221f8-c752-4477-97f7-5497d46e32f8"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Tanggal	:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="80" y="70" width="50" height="10" uuid="2e224cd4-ed3b-4886-b918-5c93b7353921"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Bioskop	:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="80" y="80" width="50" height="10" uuid="1fef2e96-44c5-4761-9cde-bd54ca3261cf"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Jam	:]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="80" y="90" width="50" height="10" uuid="3fce96cf-cff0-449b-86e6-0d3bcb5945fe"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Seat	:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="130" y="60" width="100" height="10" uuid="92fe4446-f3ee-48a3-8dc7-b4b4a4bfa517"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Trebuchet MS" size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="130" y="70" width="100" height="10" uuid="f83936d3-8efa-4106-b021-5ae5fb504c56"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Trebuchet MS" size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{studio}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="130" y="80" width="100" height="10" uuid="8b33866b-e1a8-419c-8a37-2a3b954e20f7"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Trebuchet MS" size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{startTime}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="130" y="90" width="100" height="10" uuid="3a43ff3c-866c-4c96-bbce-9914cee73baa"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Trebuchet MS" size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{seat}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="80" y="50" width="50" height="10" uuid="a69a70f3-046b-432d-8d4d-388008f159fa"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Pemesan	:]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="130" y="50" width="100" height="10" uuid="692d5911-5b9c-4146-9ba4-ad8deb4e4b51"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Trebuchet MS" size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+            </textField>
+            <image scaleImage="FillFrame">
+                <reportElement x="20" y="31" width="50" height="79" uuid="2b2287af-00d2-45bf-aee2-89b6cb1c2dfc"/>
+                <graphicElement fill="Solid"/>
+                <imageExpression><![CDATA["https://user-images.githubusercontent.com/79635999/239347006-2e23ce11-2a97-413e-95c2-f0cd0dbb1d92.png"]]></imageExpression>
+            </image>
+            <textField>
+                <reportElement x="130" y="40" width="100" height="10" uuid="f27272c2-77ab-4b64-a72e-8982c990b3f8"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="Trebuchet MS" size="6"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{codeBooking}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="80" y="40" width="50" height="10" uuid="601f39ea-bd68-4c80-9ede-6a765216271f"/>
+                <textElement verticalAlignment="Middle">
+                    <font size="6"/>
+                </textElement>
+                <text><![CDATA[Kode	:	]]></text>
+            </staticText>
+            <line>
+                <reportElement x="1" y="140" width="209" height="1" uuid="0ed8ca09-b568-4c13-9815-032d1ba0ea23"/>
+            </line>
+            <staticText>
+                <reportElement x="0" y="150" width="109" height="20" forecolor="#030303" uuid="db336ed4-4323-427e-9ad8-0e8e13c6c97a"/>
+                <textElement>
+                    <font fontName="Trebuchet MS" size="10" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Contact Customer Care]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="165" width="109" height="10" forecolor="#6E6E6E" uuid="cdf4fef8-4dd2-47b0-8edc-aee11fa794a4">
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="Trebuchet MS" size="6" isBold="false"/>
+                </textElement>
+                <text><![CDATA[+007 342-542-432]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="175" width="109" height="10" forecolor="#6E6E6E" uuid="3506ba70-a21b-4582-a73e-71957d3878a3">
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="Trebuchet MS" size="6" isBold="false"/>
+                </textElement>
+                <text><![CDATA[wakandanesia@gmail.com]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="0" y="185" width="109" height="10" forecolor="#6E6E6E" uuid="95ea5c32-cd42-4144-b1d5-68150a9515d6">
+                    <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                </reportElement>
+                <textElement>
+                    <font fontName="Trebuchet MS" size="6" isBold="false"/>
+                </textElement>
+                <text><![CDATA[Yahoo.kandasia]]></text>
+            </staticText>
+        </band>
+    </detail>
+</jasperReport>
