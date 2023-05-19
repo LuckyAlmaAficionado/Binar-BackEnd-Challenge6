@@ -25,11 +25,11 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/v*/customer/**").hasAuthority("CUSTOMER")
                 .anyRequest().authenticated()
                 .and()
-//                .and().formLogin();
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
+//                .and().formLogin();
 
         // todo -> gunakan dibawah jika ingin melihat tokennya
 
